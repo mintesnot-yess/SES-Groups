@@ -190,7 +190,7 @@ header nav {
     display: flex;
     align-items: center;
     height: 100dvh;
-    background: url('/assets/images/image6.jpg') center/cover fixed;
+    background: url('../images/image6.jpg') center/cover fixed;
 
     .hero-details {
         max-width: 700px;
@@ -261,7 +261,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: linear-gradient(#0000005d, #0000005d), url('/assets/images/background.jpg') center/cover fixed;
+    background: linear-gradient(#0000005d, #0000005d), url('../images/background.jpg') center/cover fixed;
 
 
     article {
@@ -351,7 +351,7 @@ main {
             border-radius: 10px;
             flex: 1 500px;
             height: 50vh;
-            background: url('/assets/images/image3.jpg') center/cover fixed;
+            background: url('../images/image3.jpg') center/cover fixed;
 
         }
 
@@ -620,7 +620,7 @@ main {
 
 .service-container {
     width: 100%;
-    background: url('assets/images/background.jpg') no-repeat center/cover fixed;
+    background: url('../images/background.jpg') no-repeat center/cover fixed;
 
     .services-container {
         font-family: "Open Sans", sans-serif;
