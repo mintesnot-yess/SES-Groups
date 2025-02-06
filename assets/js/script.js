@@ -1,10 +1,30 @@
 
-var currentIndex = 0;
 
 let NavigationBar = document.querySelector(".nav");
-let footer = document.querySelector("footer");
+let Footer = document.querySelector("footer");
+let Header = document.querySelector("header");
 
 let currentDate = new Date().getFullYear();
+let navContent = `<nav class="max-width">
+                <ul class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="" />
+                    </a>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a href="about.html"> About </a>
+                    </li>
+                    <li><a href="service.html"> Service </a></li>
+                    <li>
+                        <a href="contact.html"> Contact </a>
+                    </li>
+                </ul>
+                <ul class="bar">
+                    <button onclick="NavToggle()" title="bar" class="fa fa-bars bars"></button>
+                </ul>
+            </nav>`;
+
 let footerContent = `<div class="footer-container">
                 <div class="footer-section">
                     <h3>About Us</h3>
@@ -38,16 +58,8 @@ let footerContent = `<div class="footer-container">
             <p>&copy; ${currentDate} SES. All Rights Reserved.</p>`;
 
 
-footer.innerHTML = footerContent;
-
-
-
-
-
-
-
-
-
+Footer.innerHTML = footerContent;
+Header.innerHTML = navContent;
 
 function NavToggle() {
     let NavMenu = document.querySelector(".menu");
