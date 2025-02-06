@@ -204,10 +204,10 @@ header nav {
         align-items: center;
         justify-content: center;
         padding: 100px 20px;
-        border-radius: 5px;
+        border-radius: 10px;
         letter-spacing: 1px;
         -webkit-backdrop-filter: blur(2px);
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(10px);
         background: var(--black-50-color);
 
         .hero-title {
@@ -430,7 +430,81 @@ main {
     }
 }
 
+.card-container {
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 30px auto;
 
+
+    h1 {
+        margin: 20px;
+        font: 600 2rem / 2rem "Open Sans", sans-serif;
+        color: var(--primary-color);
+        text-align: start;
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        flex: 1 250px;
+        height: 100px;
+        position: relative;
+        display: grid;
+        place-content: center;
+        background-color: rgba(0, 0, 0, 0.363);
+        padding: 50px;
+        border-radius: 10px;
+        overflow: hidden;
+        animation: opacity-animation;
+        animation-timeline: view();
+        animation-range: entry 0% cover 30%;
+        text-decoration: none;
+        color: var(--white-color);
+
+
+        h2 {
+            font: 600 1.7rem / 2rem "Open Sans", sans-serif;
+
+        }
+
+        &:hover {
+            text-decoration: underline;
+
+            img {
+                scale: 1.05;
+                filter: blur(1px);
+            }
+        }
+
+
+
+    }
+
+
+    .card img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.3;
+        filter: blur(1px);
+    }
+
+    .card-content {
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+
+}
 
 @keyframes top-opacity {
     to {
@@ -459,6 +533,54 @@ main {
 
     }
 
+}
+
+.achievements-container {
+    text-align: center;
+
+
+
+    h1 {
+        color: var(--primary-color);
+        text-align: start;
+        font-size: 2em;
+        margin: 0 20px;
+
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .achievement-card {
+        background: #8682823b;
+        flex: 1 350px;
+        border-radius: 10px;
+        margin: 10px;
+        width: 300px;
+        text-align: center;
+        padding: 0 0 20px 0;
+    }
+
+    .achievement-card img {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+
+    }
+
+    .achievement-card h2 {
+        font-size: 1.5em;
+        margin: 15px 0;
+        color: #dadada;
+    }
+
+    .achievement-card p {
+        font-size: 1.1em;
+        color: #b1b1b1;
+    }
 }
 
 .about-container {
@@ -742,7 +864,8 @@ main {
     height: 100vh;
 
     .form-container {
-        flex: 1 300px;
+        width: 80%;
+        margin: auto;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         padding: 10px;
@@ -756,6 +879,7 @@ main {
             display: flex;
             flex-direction: column;
             color: var(--white-color);
+            padding: 0 30px;
         }
 
         label {
@@ -791,35 +915,54 @@ main {
 
     .contact-info {
         flex: 1 300px;
-        text-align: center;
-        color: var(--white-color);
-    }
-
-    .contact-info p {
-        margin: 10px 0;
-    }
-
-    .social-media {
-
         display: flex;
         justify-content: center;
-        gap: 10px;
+        align-items: center;
+        color: var(--white-color);
+        gap: 20px;
+        margin: 30px 0;
+        flex-wrap: wrap;
+    }
 
-        a {
-            width: 40px;
-            height: 40px;
-            display: grid;
-            place-content: center;
-            color: var(--white-color);
-            text-decoration: none;
-            border-radius: 50%;
-            font-size: 1.5rem;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        text-wrap: nowrap;
+        text-decoration: none;
+        color: var(--white-color);
 
-            &:hover {
-                background-color: var(--primary-color);
+        &:hover {
+            color: var(--primary-color);
+
+            i {
+                rotate: -30deg;
+                scale: 1.2;
             }
         }
+
+        i {
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            color: var(--white-color);
+            display: grid;
+            place-content: center;
+            border-radius: 50%;
+            background: var(--primary-color);
+
+        }
+
+        p {
+            margin: 10px 0;
+            font: 400 1rem / 1.7rem "Open Sans", sans-serif;
+
+        }
+
     }
+
+
 
 
 
@@ -1061,8 +1204,34 @@ footer p {
         display: none;
     }
 
+    .contact-container {
+        height: fit-content;
 
+        .form-container {
+            width: 100%;
+            padding: 0;
+        }
+
+        .contact-info {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .service-container {
+
+        .service-content {
+
+            h1 {
+                font: 600 2rem / 2.5rem "Open Sans", sans-serif;
+
+            }
+        }
+    }
 }
+
+
+
 
 @media (max-width: 568px) {
 
@@ -1091,36 +1260,7 @@ footer p {
         }
     }
 
-    .card-container {
 
-
-
-
-
-        .card h2 {
-            font: 400 1.7rem / 2rem "Open Sans", sans-serif;
-            color: var(--white-color-1);
-            transform: translateY(0%);
-
-
-
-        }
-
-        p {
-            font: 100 1.1rem / 1.4rem "Open Sans", sans-serif;
-            color: var(--white-color-1);
-            transform: translateY(1%);
-            opacity: 1;
-
-
-        }
-
-
-
-
-
-
-    }
 
     .service-container {
 
