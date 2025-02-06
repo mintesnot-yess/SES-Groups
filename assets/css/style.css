@@ -347,11 +347,14 @@ main {
 
         }
 
-        .addbg {
+        .side-image {
             border-radius: 10px;
             flex: 1 500px;
-            height: 50vh;
+            height: 40vh;
             background: url('../images/image3.jpg') center/cover fixed;
+            animation: opacity-animation;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
 
         }
 
@@ -413,13 +416,15 @@ main {
 
         }
 
-        .addbg {
+        .side-image {
             border-radius: 10px;
             flex: 1 500px;
-            height: 50vh;
-            animation: fpc-animation 15s infinite;
-
+            height: 40vh;
+            background: url('../images/image5.jpg') center/cover;
             z-index: 2;
+            animation: opacity-animation;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
         }
 
 
@@ -457,6 +462,7 @@ main {
         place-content: center;
         background-color: rgba(0, 0, 0, 0.363);
         padding: 50px;
+        margin: 0 10px;
         border-radius: 10px;
         overflow: hidden;
         animation: opacity-animation;
@@ -475,7 +481,7 @@ main {
             text-decoration: underline;
 
             img {
-                scale: 1.05;
+                scale: 1.1;
                 filter: blur(1px);
             }
         }
@@ -561,6 +567,9 @@ main {
         width: 300px;
         text-align: center;
         padding: 0 0 20px 0;
+        animation: opacity-animation;
+        animation-timeline: view();
+        animation-range: entry 0% cover 30%;
     }
 
     .achievement-card img {
@@ -1189,7 +1198,7 @@ footer p {
         }
     }
 
-    .addbg {
+    .side-image {
 
         height: fit-content;
 
