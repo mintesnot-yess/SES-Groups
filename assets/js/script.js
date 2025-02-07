@@ -3,7 +3,6 @@
 let NavigationBar = document.querySelector(".nav");
 let Footer = document.querySelector("footer");
 let Header = document.querySelector("header");
-
 let currentDate = new Date().getFullYear();
 let navContent = `<nav class="max-width">
                 <ul class="logo">
@@ -61,6 +60,33 @@ let footerContent = `<div class="footer-container">
 Footer.innerHTML = footerContent;
 Header.innerHTML = navContent;
 
+
+
+
+
+
+// make it email function with form
+document.querySelector('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var subject = document.getElementById('subject');
+    var message = document.getElementById('message');
+    var email = document.getElementById('email');
+
+
+    if (subject.value === '') {
+        subject.focus();
+    } if (message.value === '') {
+        message.focus();
+    } if (subject && message) {
+        var mailto_link = 'mailto:mintesnotyess@gmail.com';
+        mailto_link += '?subject=' + encodeURIComponent(subject.value);
+        mailto_link += '&body=' + encodeURIComponent(message.value);
+        mailto_link += '&from=' + encodeURIComponent(email.value);
+        window.open(mailto_link, '_blank');
+    }
+
+
+})
 function NavToggle() {
     let NavMenu = document.querySelector(".menu");
     let barMenuBTN = document.querySelector(".bars");
