@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary-color: #2ec070;
+    --primary-color: #3299dd;
     --white-color: #fff;
     --white-color-1: rgb(201, 201, 201);
     --black-color: #000;
@@ -88,9 +88,9 @@
 
 
 
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 body {
     overflow: hidden scroll;

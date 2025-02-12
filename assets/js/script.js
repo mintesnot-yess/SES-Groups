@@ -49,8 +49,12 @@ let footerContent = `<div class="footer-container">
                         <a href="#" title="Twitter">
                             <i class="fa-brands fa-x"></i>
                         </a>
-                        <a href="#" title="Instagram">
-                            <i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="fa-linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" title="fa-tiktok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
                     </div>
                 </div>
             </div>
