@@ -7,7 +7,7 @@ let currentDate = new Date().getFullYear();
 let navContent = `<nav class="max-width">
                 <ul class="logo">
                     <a href="index.html">
-                        <img src="assets/images/logo.png" alt="" />
+                        <img src="assets/images/logo.png" alt="" /> 
                     </a>
                 </ul>
                 <ul class="menu">

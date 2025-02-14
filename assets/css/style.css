@@ -186,6 +186,7 @@ header nav {
                 padding: 5px;
                 border-bottom: solid 1px transparent;
 
+
             }
         }
     }
@@ -195,8 +196,9 @@ header nav {
     }
 
     img {
-        width: 120px;
-        object-fit: cover;
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
 
 
     }
@@ -1126,12 +1128,7 @@ footer {
 
         }
 
-        img {
-            width: 120px;
-            object-fit: cover;
 
-
-        }
 
 
     }
